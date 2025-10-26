@@ -1,0 +1,143 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Inter', sans-serif;
+    background-color: #1F2937;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.container{
+    width: 100%;
+    max-width: 600px;;
+}
+.length-control{
+    margin-bottom: 30px;
+}
+.length-label{
+    color: #D5D4D8;
+    font-size: 1rem;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 10px;
+}
+.length-input {
+    background-color: #273549;
+    color: #10B981;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 12px 16px;
+    font-size: 1rem;
+    font-weight: 500;
+    width: 120px;
+    text-align: center;
+    transition: border-color, 0.3s, ease
+}
+.length-input:focus {
+    outline: none;
+    border-color: #10B981;
+}
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number]{
+    appearance: textfield;
+}
+button{
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    background-color: #10B981;
+    color: white;
+    margin-bottom: 40px;
+    transition: background-color 0.3s ease;
+}
+.btn:hover {
+    background-color: #059669;
+}
+.t{
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.span1{
+    color: #10B981;
+    font-weight: 700;
+    font-size: 2.5rem
+}
+.subt{
+    color: #D5D4D8;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.card{
+    background-color: #1f2937;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+#password-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.password-field {
+    background-color: #273549;
+    color: rgb(16,185,129);
+    border-radius: 6px;
+    padding: 15px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    min-height: 50px;
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    word-break: break-all;
+    border: 1px solid #374151;
+    cursor: pointer;
+}
+.password-field:empty::before {
+    content: "Click generate to create passwords";
+    color: #6B7280;
+    font-style: italic;
+    cursor: default;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 30px 20px;
+    }
+    
+    .t{
+        font-size: 1.5rem;
+    }
+    
+    .span1{
+        font-size: 2rem;
+    }
+    
+    .password-container {
+        flex-direction: column;
+    }
+    
+    .password-field {
+        min-width: 100%;
+    }
+}
